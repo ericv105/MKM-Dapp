@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MKM - Dapp</title>
+    <!-- CSS only -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="css/toastr.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Bungee' rel='stylesheet'>
+    <style>
+      body{
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body style="background-color:#272727;">
+    <h1 style="font-size: 54px; color: #7843e6; font-family: Bungee;">MKM</h1>
+
+    <div class="form-group">
+      <form method="post" enctype="multipart/form-data">
+        <label for="image">Image:</label>
+        <input type="file" id="image", name="image"><br>
+        <label for="price">Price (Wei):</label>
+        <input type="number" class="form-control" id="price" min="1" oninput="validity.valid||(value='');"><br>
+        <button type="button" id="sell" class="btn btn-primary">Sell</button>
+      </form>
+    </div>
+
+    <br>
+    <button type="button" id="explore" class="btn btn-primary">Explore</button>
+
+    <div class="container">
+      <div id="listingsRow" class="row">
+      </div>
+    </div>
+
+    <div id="listingTemplate" style="display: none">
+      <div class="card text-white bg-dark border-light mb-3" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <button class="btn btn-default btn-buy", type="button" data-id="0", data-price="0">Buy</button>
+          <!-- <a href="#" class="btn btn-primary">Buy</a> -->
+        </div>
+      </div>
+    </div>
+    
+
+  </body>
+  <script  src="js/toastr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.37/dist/web3.min.js"></script> -->
+  <script src="js/app.js"></script>
+
+</html>
